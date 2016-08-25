@@ -19,6 +19,7 @@ package com.github.rsallar.cinema.client.gin;
 import java.util.logging.Logger;
 
 import com.github.rsallar.cinema.client.application.main.MainModule;
+import com.github.rsallar.cinema.client.application.tabs.TabsModule;
 import com.github.rsallar.cinema.client.place.NameTokens;
 import com.gwtplatform.dispatch.rest.client.RestApplicationPath;
 import com.gwtplatform.dispatch.rest.client.gin.RestDispatchAsyncModule;
@@ -30,8 +31,6 @@ import com.gwtplatform.mvp.shared.proxy.RouteTokenFormatter;
 public class ClientModule extends AbstractPresenterModule {
 	Logger logger = Logger.getLogger("ClientModule");
 	
-    private static final String ANALYTICS_ACCOUNT = "UA-8319339-6";
-
     @Override
     protected void configure() {
     	 RestDispatchAsyncModule.Builder dispatchBuilder =  new RestDispatchAsyncModule.Builder();
@@ -43,13 +42,14 @@ public class ClientModule extends AbstractPresenterModule {
     	
     	install(new DefaultModule.Builder()
                 .tokenFormatter(RouteTokenFormatter.class)
-                .defaultPlace(NameTokens.home)
+                .defaultPlace(NameTokens.tabs)
                 .errorPlace(NameTokens.error)
                 .unauthorizedPlace(NameTokens.error)
                 .build());
     	   	
     	
     	install(new MainModule());
+    	install(new TabsModule());
     	
   
     }

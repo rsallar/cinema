@@ -4,16 +4,17 @@ import javax.inject.Inject;
 
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtplatform.mvp.client.ViewImpl;
+
+import gwt.material.design.client.ui.MaterialContainer;
 
 class MainView extends ViewImpl implements MainPresenter.MyView {
     interface Binder extends UiBinder<Widget, MainView> {
     }
 
     @UiField
-    SimplePanel main;
+    MaterialContainer main;
 
     @Inject
     MainView(Binder uiBinder) {

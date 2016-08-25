@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:gwt.material.design.client.ui">
+    
+    
+ <m:MaterialTab type="ICON" shadow="1" backgroundColor="green" indicatorColor="yellow">
+  <m:MaterialTabItem waves="YELLOW" grid="s4" ui:field="tab1">
+   <m:MaterialLink iconType="PHONE" text="Recents" href="#tab31" textColor="white"/>
+  </m:MaterialTabItem>
+  <m:MaterialTabItem waves="YELLOW" grid="s4" ui:field="tab2">
+   <m:MaterialLink iconType="FAVORITE" text="Favorites" href="#tab32" textColor="white"/>
+  </m:MaterialTabItem>
+  <m:MaterialTabItem waves="YELLOW" grid="s4" ui:field="tab3">
+   <m:MaterialLink iconType="NEAR_ME" text="NearBy" href="#tab33" textColor="white"/>
+  </m:MaterialTabItem>
+ </m:MaterialTab>
+
+</ui:UiBinder>
